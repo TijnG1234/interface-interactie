@@ -3,24 +3,68 @@
 /**************/
 
 /* naar een idee van Jen Simmons */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 body {
-  margin:0;
+  /* margin:0; */
+  background-image: url("../images/achtergrond.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+body > section:nth-of-type(1) {
+  width: 100%;
+  max-width: 100vh;
+  background-color: white;
+  border-radius: 2em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+body > section:nth-of-type(1) section{
+  display: block;
+}
+
+
+section:nth-of-type(1) ul{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 14px;
+  width: 100%;
+  padding: 50px;
+}
+
+section:nth-of-type(1) ul li{
+  list-style-type: none;
+}
+
+section:nth-of-type(1) ul li img{
+  width: 100%;
 }
 
 button:not([disabled]) {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 
-
+section > section > section{
+  width: 80%;
+  height: 80%;
+  background-color: grey;
+}
 
 
 /*********************/
@@ -28,8 +72,8 @@ img {
 /*********************/
 
 :root {
-  --color-headings:crimson
-  /* ... */
+  --color-headings: crimson
+    /* ... */
 
 }
 
@@ -42,9 +86,16 @@ img {
 /********************/
 
 h1 {
-  color:var(--color-headings);
+  color: var(--color-headings);
 }
 
 /* ... */
 
+
+
+
+/* ul {
+  list-style: none;
+  grid-area: 1 / 2 / 4 / 4;
+} */
 
