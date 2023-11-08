@@ -15,6 +15,7 @@
 body {
   /* margin:0; */
   font-family: 'Pokemon DS', sans-serif;
+  cursor: url('../images/fire.png') 64 64, auto;
   /* Gebruik het lettertype op het body-element */
   background-image: url("../images/achtergrond.jpeg");
   background-size: cover;
@@ -36,7 +37,7 @@ body>section:nth-of-type(1) {
   border-radius: 2em;
   display: grid;
   grid-template-columns: 50% 50%;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
   /* Outer shadow */
 }
 
@@ -52,8 +53,12 @@ ol {
 
 body>section:nth-of-type(1) section {
   display: block;
+  padding-left: 20px;
 }
 
+body>section:nth-of-type(1) section article section{
+  padding-left: 0;
+}
 
 section:nth-of-type(1) ul {
   display: grid;
@@ -61,6 +66,7 @@ section:nth-of-type(1) ul {
   gap: 14px;
   width: 100%;
   padding: 50px;
+  border-right: solid 1px black;
 }
 
 section:nth-of-type(1) ul li {
@@ -74,11 +80,13 @@ section:nth-of-type(1) ul li img {
   /* Voeg een transparante rand toe om mee te beginnen */
   border-radius: 1em;
   transition: border-color 0.3s;
+  
   /* Voeg een overgangseffect toe voor de randkleur */
 }
 
 section:nth-of-type(1) ul li img:hover {
   border-color: red;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   /* Verander de randkleur naar rood bij hover */
 }
 
@@ -92,9 +100,9 @@ img {
 
 section>section>section {
   width: 90%;
-  height: 67%;
+  height: 65%;
   grid-template-columns: 20% 20%;
-  padding: 20px;
+  padding: 18px;
   background-color: white;
   border-radius: 1em;
 
