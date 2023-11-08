@@ -60,9 +60,11 @@ var fifthBase = document.querySelector('.base5');
 var sixthBase = document.querySelector('.base6');
 
 
-var audio = new Audio("click.mp3")
-var audio1 = new Audio("roar.mp3")
+var audio = new Audio("./audio/click.mp3")
+var audio1 = new Audio("./audio/roar.mp3")
 
+
+// Quinten help code //
 function removeAll() {
     listItemOne.style.color = "black";
     listItemTwo.style.color = "black";
