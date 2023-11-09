@@ -115,7 +115,14 @@ function secondCardShow() {
         }, 17000); // Na 17 seconden wordt gifImage verwijderd
     }, 5000); // Na 5 seconden wordt gifImage toegevoegd
 }
+
+function secondKeydown(e) {
+    if (e.key == "Enter") {
+        secondCardShow();
+    }
+}
 secondCard.addEventListener("click", secondCardShow);
+secondCard.addEventListener("keydown", secondKeydown);
 
 
 function thirdCardShow() {
