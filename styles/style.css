@@ -2,9 +2,12 @@
 /* CSS REMEDY */
 /**************/
 @font-face {
-  font-family: 'Pokemon DS'; /* Geef het lettertype een naam */
-  src: url('../fonts/pokemon-ds-font.ttf') format('opentype'); /* Verwijs naar het lettertypebestand */
+  font-family: 'Pokemon DS';
+  /* Geef het lettertype een naam */
+  src: url('../fonts/pokemon-ds-font.ttf') format('opentype');
+  /* Verwijs naar het lettertypebestand */
 }
+
 /* naar een idee van Jen Simmons */
 *,
 *::after,
@@ -41,8 +44,9 @@ body>section:nth-of-type(1) {
   /* Outer shadow */
 }
 
-body > section:nth-of-type(1) {
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5); /* Inner shadow */
+body>section:nth-of-type(1) {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+  /* Inner shadow */
 }
 
 ol {
@@ -56,21 +60,36 @@ body>section:nth-of-type(1) section {
   padding-left: 20px;
 }
 
-body>section:nth-of-type(1) section article section{
+body>section:nth-of-type(1) section article section {
   padding-left: 0;
+}
+
+body>section:nth-of-type(1) section article section h4 {
+  margin: 10px 0;
+}
+
+body>section:nth-of-type(1) section article section p {
+  padding: 0 !important;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  display: inline-block;
 }
 
 section:nth-of-type(1) ul {
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 14px;
+  gap: 18px;
   width: 100%;
   padding: 60px;
   border-right: solid 1px black;
+
 }
+
 
 section:nth-of-type(1) ul li {
   list-style-type: none;
+  scale: 1.05;
 
 }
 
@@ -80,14 +99,16 @@ section:nth-of-type(1) ul li img {
   /* Voeg een transparante rand toe om mee te beginnen */
   border-radius: 1em;
   transition: border-color 0.3s;
-  
+
   /* Voeg een overgangseffect toe voor de randkleur */
 }
 
-section:nth-of-type(1) ul li img:hover {
+section:nth-of-type(1) ul li img:hover,
+section:nth-of-type(1) ul li img:focus-visible {
   border-color: red;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   /* Verander de randkleur naar rood bij hover */
+  outline: none;
 }
 
 button:not([disabled]) {
@@ -108,12 +129,18 @@ section>section>section {
 
 }
 
+body>section:nth-of-type(1) section article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 /* section > section > section .base.hidden{
   display: none
 } */
 
 section>section>section .hidden {
-  display: none
+  display: none !important;
 }
 
 
@@ -128,10 +155,9 @@ section>section>section .hidden {
 
 }
 
-p{
-  font-size: 12px;
+p {
+  font-size: 16px;
   padding-right: 120px;
-  
 }
 
 

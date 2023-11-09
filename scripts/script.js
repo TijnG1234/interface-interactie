@@ -15,23 +15,22 @@ var images = imageList.querySelectorAll('li > img');
 imageList.addEventListener('click', function (event) {
     var targetImage = event.target;
 
-    
+
     // Met hulp van Quinten - helpstudent
-    if (targetImage.tagName === 'IMG') {
+    if (targetImage.tagName === 'IMG') { // Controleer of het geklikte element een afbeelding is
         // Voer de flip-animatie uit voor de specifieke geklikte afbeelding
-        var currentRotation = 0;
+        var currentRotation = 0; // Initialiseren van de huidige rotatiehoek als 0 graden
         var interval = 10; // tijd tussen rotatie-updates in milliseconden
-        var targetRotation = 360;
-        
-        var rotateImage = function () {
+        var targetRotation = 360; // Stel de doelrotatie in (360 graden voor een volledige flip)
+
+        var rotateImage = function () { // Definieer een functie om de afbeelding te roteren
             if (currentRotation < targetRotation) {
-                currentRotation += 5; // pas de rotatiehoek aan
-                targetImage.style.transform = 'rotateY(' + currentRotation + 'deg)';
-                setTimeout(rotateImage, interval);
+                currentRotation += 5; // pas de rotatiehoek aan met 5 graden
+                targetImage.style.transform = 'rotateY(' + currentRotation + 'deg)'; // Pas de CSS-transformatie aan om de afbeelding te roteren
+                setTimeout(rotateImage, interval); // Voer deze functie opnieuw uit na het interval
             }
         };
-
-        rotateImage();
+        rotateImage(); // Roept de functie aan om de rotatie te starten
     }
 });
 
@@ -87,7 +86,15 @@ function firstCardShow() {
     secondBase.classList.add("hidden");
     listItemOne.style.color = "red";
 }
+
+function firstKeydown(e) {
+    if (e.key == "Enter") {
+        firstCardShow();
+    }
+}
 firstCard.addEventListener("click", firstCardShow);
+firstCard.addEventListener("keydown", firstKeydown);
+
 
 function secondCardShow() {
     removeAll();
@@ -105,10 +112,11 @@ function secondCardShow() {
         // Verwijder gifImage na nog eens 5 seconden
         setTimeout(function () {
             document.body.removeChild(gifImage);
-        }, 17000); // Na 5 seconden wordt gifImage verwijderd
+        }, 17000); // Na 17 seconden wordt gifImage verwijderd
     }, 5000); // Na 5 seconden wordt gifImage toegevoegd
 }
 secondCard.addEventListener("click", secondCardShow);
+
 
 function thirdCardShow() {
     removeAll();
@@ -117,7 +125,15 @@ function thirdCardShow() {
     thirdBase.classList.remove("hidden")
     listItemThree.style.color = "red";
 }
+
+function thirdKeydown(e) {
+    if (e.key == "Enter") {
+        thirdCardShow();
+    }
+}
 thirdCard.addEventListener("click", thirdCardShow);
+thirdCard.addEventListener("keydown", thirdKeydown);
+
 
 function fourthCardShow() {
     removeAll();
@@ -126,7 +142,15 @@ function fourthCardShow() {
     fourthBase.classList.remove("hidden")
     listItemFour.style.color = "red";
 }
+
+function fourthKeydown(e) {
+    if (e.key == "Enter") {
+        fourthCardShow();
+    }
+}
 fourthCard.addEventListener("click", fourthCardShow);
+fourthCard.addEventListener("keydown", fourthKeydown);
+
 
 function fifthCardShow() {
     removeAll();
@@ -135,7 +159,16 @@ function fifthCardShow() {
     fifthBase.classList.remove("hidden")
     listItemFifth.style.color = "red";
 }
+
+function fifthKeydown(e) {
+    if (e.key == "Enter") {
+        fifthCardShow();
+    }
+}
 fifthCard.addEventListener("click", fifthCardShow);
+fifthCard.addEventListener("keydown", fifthKeydown);
+
+
 
 function sixthCardShow() {
     removeAll();
@@ -144,4 +177,12 @@ function sixthCardShow() {
     sixthBase.classList.remove("hidden")
     listItemSixth.style.color = "red";
 }
+
+
+function sixKeydown(e) {
+    if (e.key == "Enter") {
+        sixthCardShow();
+    }
+}
 sixthCard.addEventListener("click", sixthCardShow);
+sixthCard.addEventListener("keydown", sixKeydown);
