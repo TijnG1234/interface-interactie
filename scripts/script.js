@@ -193,3 +193,13 @@ function sixKeydown(e) {
 }
 sixthCard.addEventListener("click", sixthCardShow);
 sixthCard.addEventListener("keydown", sixKeydown);
+
+function fadeOut() {
+    var wrapper = document.getElementById('wrapper');
+    wrapper.style.opacity = 0;
+
+    // Optional: You can remove the element from the DOM after the fadeout
+    setTimeout(function () {
+        wrapper.style.display = 'none';
+    }, 1000); // Adjust the time according to the transition duration
+}

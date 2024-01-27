@@ -2,9 +2,9 @@
 /* CSS REMEDY */
 /**************/
 @font-face {
-  font-family: 'Pokemon DS';
+  font-family: "Pokemon DS";
   /* Geef het lettertype een naam */
-  src: url('../fonts/pokemon-ds-font.ttf') format('opentype');
+  src: url("../fonts/pokemon-ds-font.ttf") format("opentype");
   /* Verwijs naar het lettertypebestand */
 }
 
@@ -17,26 +17,67 @@
 
 body {
   /* margin:0; */
-  font-family: 'Pokemon DS', sans-serif;
-  cursor: url('../images/fire.png') 64 64, auto;
+  font-family: "Pokemon DS", sans-serif;
+  cursor: url("../images/fire.png") 64 64, auto;
   /* Gebruik het lettertype op het body-element */
-  background-image: url("../images/achtergrond.jpeg");
+  /* background-image: url("../images/bg-new.jpeg"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 10px;
   height: 100vh;
   width: 100vw;
   display: flex;
+  margin:0;
 }
 
-body>section:nth-of-type(1) {
+.outer-wrapper{
+  z-index: 9;
+  position: relative;
+  /* overflow: hidden; */
+  margin: 15px;
+}
+
+body > img{
+  z-index: 9;
+}
+
+#wrapper {
+  background-image: url("../images/Design_charizard1_.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 28px;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  background-image: url("../images/bg-new.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+body > section:nth-of-type(1) {
   width: 100%;
   max-width: 100vh;
-  background-color: #E6E5E6;
-  border: 3px solid black;
+  background-color: #e6e5e6;
+  border: 5px solid #F5A165;
   border-radius: 2em;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -44,8 +85,8 @@ body>section:nth-of-type(1) {
   /* Outer shadow */
 }
 
-body>section:nth-of-type(1) {
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
+body > section:nth-of-type(1) {
+  box-shadow: inset 5px 5px 10px rgba(1, 0, 0, 0.5);
   /* Inner shadow */
 }
 
@@ -55,20 +96,20 @@ ol {
   padding-top: 52px;
 }
 
-body>section:nth-of-type(1) section {
+body > section:nth-of-type(1) section {
   display: block;
   padding-left: 20px;
 }
 
-body>section:nth-of-type(1) section article section {
+body > section:nth-of-type(1) section article section {
   padding-left: 0;
 }
 
-body>section:nth-of-type(1) section article section h4 {
+body > section:nth-of-type(1) section article section h4 {
   margin: 10px 0;
 }
 
-body>section:nth-of-type(1) section article section p {
+body > section:nth-of-type(1) section article section p {
   padding: 0 !important;
   margin: 0;
   margin-block-start: 0;
@@ -82,15 +123,11 @@ section:nth-of-type(1) ul {
   gap: 18px;
   width: 100%;
   padding: 60px;
-  border-right: solid 1px black;
-
 }
-
 
 section:nth-of-type(1) ul li {
   list-style-type: none;
   scale: 1.05;
-
 }
 
 section:nth-of-type(1) ul li img {
@@ -119,17 +156,16 @@ img {
   max-width: 100%;
 }
 
-section>section>section {
+section > section > section {
   width: 90%;
   height: 65%;
   grid-template-columns: 20% 20%;
   padding: 18px;
   background-color: white;
   border-radius: 1em;
-
 }
 
-body>section:nth-of-type(1) section article {
+body > section:nth-of-type(1) section article {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -139,28 +175,23 @@ body>section:nth-of-type(1) section article {
   display: none
 } */
 
-section>section>section .hidden {
+section > section > section .hidden {
   display: none !important;
 }
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 
 :root {
-  --color-headings: crimson
-    /* ... */
-
+  --color-headings: crimson;
+  /* ... */
 }
 
 p {
   font-size: 16px;
   padding-right: 120px;
 }
-
-
 
 /********************/
 /* ALGEMENE STYLING */
@@ -171,9 +202,6 @@ h1 {
 }
 
 /* ... */
-
-
-
 
 /* ul {
   list-style: none;
